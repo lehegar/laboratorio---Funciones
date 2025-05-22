@@ -4,6 +4,8 @@ const numeroDisplay = document.getElementById("numero-turno");
 const botonSiguiente = document.getElementById("siguiente");
 const botonAnterior = document.getElementById("anterior");
 const botonReset = document.getElementById("reset");
+const botonCambiar = document.getElementById("cambiar");
+const cajita = document.getElementById("caja") as HTMLInputElement | null;
 
 function displayActualizado() {
   if (numeroDisplay) {
@@ -24,6 +26,19 @@ function anterior() {
 function reset() {
   turnoActual = 0;
   displayActualizado();
+}
+
+function cambiar() {
+  if (cajita) turnoActual = parseInt(cajita.value);
+  displayActualizado();
+}
+
+if (
+  botonCambiar !== null &&
+  botonCambiar !== undefined &&
+  botonCambiar instanceof HTMLButtonElement
+) {
+  botonCambiar.addEventListener("click", cambiar);
 }
 
 if (
