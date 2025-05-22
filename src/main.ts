@@ -26,6 +26,26 @@ function reset() {
   displayActualizado();
 }
 
-botonSiguiente.addEventListener("click", siguiente);
-botonAnterior.addEventListener("click", anterior);
-botonReset.addEventListener("click", reset);
+if (
+  botonSiguiente !== null &&
+  botonSiguiente !== undefined &&
+  botonSiguiente instanceof HTMLButtonElement
+) {
+  botonSiguiente.addEventListener("click", siguiente);
+}
+
+if (
+  botonAnterior !== null &&
+  botonAnterior !== undefined &&
+  botonAnterior instanceof HTMLButtonElement
+) {
+  botonAnterior.addEventListener("click", anterior);
+}
+
+if (
+  botonReset !== null &&
+  botonReset !== undefined &&
+  botonReset instanceof HTMLButtonElement
+) {
+  botonReset.addEventListener("click", reset);
+}
