@@ -1,11 +1,17 @@
-function sumar() {
-  const sumando1 = document.getElementById("sumando1").value;
-  const sumando2 = document.getElementById("sumando2").value;
+let turnoActual: number = 0;
 
-  const resultado = parseInt(sumando1) + parseInt(sumando2);
+const numeroDisplay = document.getElementById("numero-turno");
+const botonSiguiente = document.getElementById("siguiente");
 
-  document.getElementById("resultado").innerHTML = resultado;
+function displayActualizado() {
+  if (numeroDisplay) {
+    numeroDisplay.textContent = turnoActual.toString().padStart(2, "0");
+  }
 }
 
-const botonSumar = document.getElementById("sumar");
-botonSumar.addEventListener("click", sumar);
+function siguiente() {
+  turnoActual = turnoActual + 1;
+  displayActualizado;
+}
+
+botonSiguiente.addEventListener("click", siguiente);

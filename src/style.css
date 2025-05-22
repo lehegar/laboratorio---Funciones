@@ -4,7 +4,7 @@
   font-weight: 400;
 }
 
-  .turno-display {
+.turno-display {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,21 +30,15 @@
 }
 
 .botones {
-
   display: flex;
   gap: 50px;
   font-size: larger;
   margin-top: 20px;
 }
 
-
 button {
-
   background-color: rgb(171, 171, 235);
   display: grid;
   gap: 20px;
   font-size: 20px;
-}
-  
-
 }
