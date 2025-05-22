@@ -11,9 +11,12 @@
   justify-content: center;
   background-color: #fff;
   border: 1px solid #ddd;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    font-size: 90px;
+  }
 }
 
 .numero-turno {
@@ -27,6 +30,7 @@
   font-weight: bold;
   margin: 0;
   text-align: center;
+  margin-top: -30px;
 }
 
 .botones {
@@ -34,6 +38,7 @@
   gap: 50px;
   font-size: larger;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 button {

@@ -11,7 +11,7 @@ function displayActualizado() {
 
 function siguiente() {
   turnoActual = turnoActual + 1;
-  displayActualizado;
+  displayActualizado();
 }
 
 botonSiguiente.addEventListener("click", siguiente);
