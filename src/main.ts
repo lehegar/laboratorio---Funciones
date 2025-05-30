@@ -5,7 +5,7 @@ const botonSiguiente = document.getElementById("siguiente");
 const botonAnterior = document.getElementById("anterior");
 const botonReset = document.getElementById("reset");
 const botonCambiar = document.getElementById("cambiar");
-const cajita = document.getElementById("caja") as HTMLInputElement | null;
+const cajita = document.getElementById("caja");
 
 function displayActualizado() {
   if (numeroDisplay) {
@@ -29,8 +29,13 @@ function reset() {
 }
 
 function cambiar() {
-  if (cajita) turnoActual = parseInt(cajita.value);
-  displayActualizado();
+  if (cajita !== null && cajita instanceof HTMLInputElement) {
+    const nuevoValor = parseInt(cajita.value);
+    if (!isNaN(nuevoValor)) {
+      turnoActual = nuevoValor;
+      displayActualizado();
+    }
+  }
 }
 
 if (
